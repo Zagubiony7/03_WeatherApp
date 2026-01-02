@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -10,42 +10,43 @@ html {
 }
 
 body {
-  background-color: #242424;
-  font-family: "Google Sans", sans-serif;
-  min-height: 100vh;
   display: grid;
   place-items: center;
+  background-color: #041424;
+  min-height: 100vh;
   color: #fdf1f1;
+  font-family: "Google Sans", sans-serif;
 }
 
 .container {
-  background-color: #3c27a2;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 1rem;
-  padding: 4rem;
   background-image: linear-gradient(160deg, rgba(70, 107, 210, 1) 0%, rgba(28, 37, 66, 1) 100%);
+  background-color: #3c27a2;
+  padding: 6rem;
+  min-height: 56.3rem;
 }
 
 /* Search bar */
 .search-bar {
   display: flex;
-  padding: 3rem 3rem 1rem 3rem;
   gap: 1rem;
+  padding: 3rem 3rem 1rem 3rem;
 }
 
 .search-input {
-  padding: 0 3rem;
-  border-radius: 2rem;
-  border: none;
   outline: none;
+  border: none;
+  border-radius: 2rem;
+  padding: 0 3rem;
 }
 
 .search-btn {
-  border-radius: 50%;
-  border: none;
   cursor: pointer;
+  border: none;
+  border-radius: 50%;
 }
 
 .search-img {
@@ -61,6 +62,14 @@ body {
   align-items: center;
 }
 
+.weather-img {
+  width: 20rem;
+}
+
+.no-weather-img {
+  height: 20rem;
+}
+
 .temperature {
   font-size: 6.8rem;
 }
@@ -70,16 +79,16 @@ body {
 }
 
 .weather-localization {
-  font-size: 4.4rem;
   margin-bottom: 6rem;
+  font-size: 4.4rem;
 }
 
 /* Weather conditions */
 .weather-conditions {
-  width: 100%;
-  padding: 0 3rem;
   display: flex;
   justify-content: space-between;
+  padding: 0 3rem;
+  width: 100%;
 }
 
 .weather {
@@ -100,7 +109,7 @@ body {
 
 .humidity-img,
 .wind-img {
+  margin-top: 0.5rem;
   width: 3rem;
   height: 3rem;
-  margin-top: 0.5rem;
 }
