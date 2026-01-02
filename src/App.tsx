@@ -8,7 +8,6 @@ const App = () => {
   const [apiData, setApiData] = useState({ name: "", text: "", temp_c: "", humidity: "", wind_kph: "" });
   const [location, setLocation] = useState("");
   const [locationName, setLocationName] = useState("");
-  const [isLocationName, setIsLocationName] = useState(false);
   useEffect(() => {
     if (location) {
       const weatherInfo = async (location: string) => {
@@ -30,15 +29,12 @@ const App = () => {
           console.log(error);
         }
       };
-      if (isLocationName) {
-        weatherInfo(locationName);
-      }
+      weatherInfo(locationName);
     }
   }, [locationName]);
   const handleSetLocation = (e: React.ChangeEvent<HTMLInputElement>) => setLocation(e.target.value);
   const handleSetIsLocationName = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsLocationName((prev) => !prev);
     if (location.trim() === "") return;
     setLocationName(location);
   };
